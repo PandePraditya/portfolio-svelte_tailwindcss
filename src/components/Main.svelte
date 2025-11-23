@@ -81,7 +81,7 @@
     {
       title: "Freelance Developer",
       place: "Wedyapancer Dev",
-      period: "March 2025 — Present",
+      period: "April 2025 — Present",
       description:
         "Part of a developer group creating web, mobile, and desktop applications. Contributed to real client projects, API development, authentication systems, and UI implementation.",
     },
