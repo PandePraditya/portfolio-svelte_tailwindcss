@@ -12,9 +12,6 @@ node_modules
 .DS_Store
 Thumbs.db
 
-# Static Images
-/static/assets/images/*
-
 # Env
 .env
 .env.*
