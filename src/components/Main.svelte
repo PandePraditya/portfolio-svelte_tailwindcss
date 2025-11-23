@@ -137,7 +137,7 @@
     </div>
     <div class="relative shadow-2xl grid place-items-center">
       <img
-        src="/images/profile.jpeg"
+        src="/images/profile.webp"
         alt="Profile Image"
         class="object-cover z-[2] max-h-[70vh] rounded-full"
       />
