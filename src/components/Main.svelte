@@ -1,5 +1,13 @@
 <script>
   import Work from "./Work.svelte";
+  import Typewriter from "./Typewriter.svelte";
+
+  const words = [
+    "Full-Stack Developer",
+    "Web Quality Assurance",
+    "Laravel Enthusiast",
+    "Problem Solver"
+  ];
 
   let works = [
     {
@@ -22,10 +30,10 @@
       description:
         "Makardhi Jobfair is a job fair website for Bali Tourism Polytechnic, built with Laravel and TailwindCSS. It includes job listings, company profiles, and an application system for students and the public.",
       images: [
-        "/images/works/work-2/welcome.webp", 
-        "/images/works/work-2/landing-page.webp", 
-        "/images/works/work-2/login-admin.webp", 
-        "/images/works/work-2/admin-page.webp", 
+        "/images/works/work-2/welcome.webp",
+        "/images/works/work-2/landing-page.webp",
+        "/images/works/work-2/login-admin.webp",
+        "/images/works/work-2/admin-page.webp",
       ],
     },
     {
@@ -101,9 +109,11 @@
       <h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl">
         Hi! I'm <span class="poppins text-blue-500">Pande</span> Praditya
         <br />
-        Full-Stack
-        <span class="poppins text-blue-500">Developer</span>
+        <!-- This part types first -->
+        <Typewriter {words} speed={80} startDelay={500} />
       </h2>
+
+      <!-- The rest of your content remains the same -->
       <p class="text-base sm:text-lg md:text-xl">
         My <span class="text-blue-500">Favorite tech </span> includes PHP (Laravel),
         JS (Vue.js, Nuxt.js, SvelteKit), TailwindCSS, MySQL or PostgreSQL, and QA
@@ -115,7 +125,7 @@
         > with AWS, Docker, and Git Actions.
       </p>
       <a
-        href="mailto:pandepraditya@gmail.com"
+        href="mailto:johndoe@gmail.com"
         target="_blank"
         class="blueShadow mx-auto lg:mr-auto text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 cursor-pointer"
       >
@@ -127,7 +137,7 @@
     </div>
     <div class="relative shadow-2xl grid place-items-center">
       <img
-        src={"images/profile.jpeg"}
+        src="/images/profile.jpeg"
         alt="Profile Image"
         class="object-cover z-[2] max-h-[70vh] rounded-full"
       />
@@ -267,7 +277,9 @@
         <div
           class="relative h-48 bg-slate-900 border border-gray-500 rounded-lg grid place-items-center text-gray-200"
         >
-          <i class="fa-regular fa-face-frown absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl"></i>
+          <i
+            class="fa-regular fa-face-frown absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl"
+          ></i>
           Preview unavailable due to contract with client.
         </div>
       {:else if selectedWork.images && selectedWork.images.length > 0}
