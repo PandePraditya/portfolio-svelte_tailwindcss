@@ -21,19 +21,19 @@
 
   let benefits = [
     {
-      name: "A self-taught developer",
+      name: "A self taught developer",
       description:
-        "Someone who learns independently through real projects, online resources, and hands-on experimentation.",
+        "Someone who mostly learns through real projects, online resources, and hands-on experimentation. I've been to college but most of my skills come from self-learning and internships.",
     },
     {
-      name: "A curious problem-solver",
+      name: "A curious person",
       description:
-        "Always exploring how things work and finding efficient, practical solutions to challenges.",
+        "Always exploring how things work and finding better ways to solve problems through coding and technology, which is the main reason why i chose to become a developer.",
     },
     {
       name: "A dedicated lifelong learner",
       description:
-        "Continuously improving skills, experimenting with new tools, and staying updated with modern development trends.",
+        "Continuously improving skills, experimenting with new tools, and staying updated with modern development trends. Currently focusing on mastering Laravel, learning Docker and Typescript.",
     },
   ];
 
@@ -86,7 +86,12 @@
       <p class="text-base sm:text-lg md:text-xl">
         My <span class="text-violet-400">Favorite tech </span> includes PHP (Laravel),
         JS (Vue.js, Nuxt.js, SvelteKit), TailwindCSS, MySQL or PostgreSQL, and QA
-        (Cypress)
+        (Cypress).
+      </p>
+      <p class="text-base sm:text-lg md:text-xl">
+        Besides the tech stack above, I'm also <span class="text-violet-400"
+          >familiar</span
+        > with AWS, Docker, and Git Actions.
       </p>
       <a
         href="mailto:pandepraditya@gmail.com"
@@ -99,11 +104,11 @@
         <h4 class="relative z-[9]">Get in touch &rarr;</h4>
       </a>
     </div>
-    <div class="relative shadow-2xl gird place-items-center">
+    <div class="relative shadow-2xl grid place-items-center">
       <img
-        src={"images/profile.png"}
+        src={"images/profile.jpeg"}
         alt="Profile Image"
-        class="object-cover z-[2] max-h-[70vh]"
+        class="object-cover z-[2] max-h-[70vh] rounded-full"
       />
     </div>
   </section>
@@ -112,9 +117,7 @@
     id="about"
     class="py-20 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative"
   >
-    <div
-      class="flex flex-col gap-2 text-center py-4"
-    >
+    <div class="flex flex-col gap-2 text-center py-4">
       <h6 class="text-lg sm:text-xl md:text-2xl">Want to know more?</h6>
       <h3 class="font-medium text-3xl sm:text-4xl md:text-5xl">
         A Bit <span class="poppins text-violet-400">about</span> me.
