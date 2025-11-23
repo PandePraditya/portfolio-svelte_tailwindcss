@@ -1,7 +1,7 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
 
-    // --- PROPS ---
+    // PROPS 
     /** An array of words to cycle through */
     export let words = [];
     /** The delay between each character in milliseconds */
@@ -11,14 +11,14 @@
     /** Whether to loop through the words infinitely */
     export let loop = true;
 
-    // --- STATE ---
+    // STATE 
     let typedText = '';
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
     let timeoutId;
 
-    // --- LOGIC ---
+    // LOGIC 
     function tick() {
         const currentWord = words[wordIndex];
 
