@@ -4,8 +4,8 @@
   let isMenuOpen = false;
 
   let tabs = [
-    { name: "Projects", link: "#projects" },
     { name: "About Me", link: "#about" },
+    { name: "Projects", link: "#projects" },
     { name: "Experience", link: "#experience" },
     // { name: "Blog", link: "#" }, // Optional
   ];
@@ -18,7 +18,7 @@
 <header
   class={"sticky z-[10] top-0 duration-200 px-6 py-4 flex items-center justify-between border border-solid" +
     (y > 0
-      ? "py-4 bg-slate-950 border-violet-950"
+      ? "py-4 bg-slate-950 border-blue-900 rounded-b-md"
       : "py-6 bg-transparent border-transparent")}
 >
   <h1 class="font-medium text-xl">
@@ -26,7 +26,7 @@
   </h1>
   <div class="sm:flex ml-auto pr-4 items-center gap-4 hidden">
     {#each tabs as tab, index}
-      <a href={tab.link} class="duration-200 hover:text-violet-400">
+      <a href={tab.link} class="duration-200 hover:text-blue-500">
         <p>{tab.name}</p>
       </a>
     {/each}
@@ -38,7 +38,7 @@
     class="blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950 hidden sm:inline-block"
   >
     <div
-      class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"
+      class="absolute top-0 right-full w-full h-full bg-blue-500 opacity-20 group-hover:translate-x-full z-0 duration-200"
     ></div>
     <h4 class="relative z-[9]">Get in touch</h4>
   </a>
@@ -60,7 +60,7 @@
       {#each tabs as tab}
         <a
           href={tab.link}
-          class="hover:text-violet-400"
+          class="hover:text-blue-500"
           on:click={() => (isMenuOpen = false)}
         >
           {tab.name}
@@ -72,7 +72,7 @@
         class="mt-2 blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950 w-fit"
       >
         <div
-          class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"
+          class="absolute top-0 right-full w-full h-full bg-blue-500 opacity-20 group-hover:translate-x-full z-0 duration-200"
         ></div>
         <h4 class="relative z-[9]">Get in touch</h4>
       </a>

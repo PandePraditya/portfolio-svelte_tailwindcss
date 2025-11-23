@@ -99,18 +99,18 @@
       class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10"
     >
       <h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl">
-        Hi! I'm <span class="poppins text-violet-400">Pande</span> Praditya
+        Hi! I'm <span class="poppins text-blue-500">Pande</span> Praditya
         <br />
         Full-Stack
-        <span class="poppins text-violet-400">Developer</span>
+        <span class="poppins text-blue-500">Developer</span>
       </h2>
       <p class="text-base sm:text-lg md:text-xl">
-        My <span class="text-violet-400">Favorite tech </span> includes PHP (Laravel),
+        My <span class="text-blue-500">Favorite tech </span> includes PHP (Laravel),
         JS (Vue.js, Nuxt.js, SvelteKit), TailwindCSS, MySQL or PostgreSQL, and QA
         (Cypress).
       </p>
       <p class="text-base sm:text-lg md:text-xl">
-        Besides the tech stack above, I'm also <span class="text-violet-400"
+        Besides the tech stack above, I'm also <span class="text-blue-500"
           >familiar</span
         > with AWS, Docker, and Git Actions.
       </p>
@@ -120,7 +120,7 @@
         class="blueShadow mx-auto lg:mr-auto text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 cursor-pointer"
       >
         <div
-          class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"
+          class="absolute top-0 right-full w-full h-full bg-blue-500 opacity-20 group-hover:translate-x-full z-0 duration-200"
         ></div>
         <h4 class="relative z-[9]">Get in touch &rarr;</h4>
       </a>
@@ -141,7 +141,7 @@
     <div class="flex flex-col gap-2 text-center py-4">
       <h6 class="text-lg sm:text-xl md:text-2xl">Want to know more?</h6>
       <h3 class="font-medium text-3xl sm:text-4xl md:text-5xl">
-        A Bit <span class="poppins text-violet-400">about</span> me.
+        A Bit <span class="poppins text-blue-500">about</span> me.
       </h3>
     </div>
     <p class="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl">
@@ -170,7 +170,7 @@
     <div class="flex flex-col gap-2 text-center">
       <h4 class="text-lg sm:text-xl md:text-2xl">A few of my creations</h4>
       <h5 class="poppins font-semibold text-3xl sm:text-4xl md:text-5xl">
-        Curious to <span class="poppins text-violet-400">see</span> my work?
+        Curious to <span class="poppins text-blue-500">see</span> my work?
       </h5>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
@@ -178,12 +178,12 @@
         <p>
           Timedoor Inventory is an inventory management system with an
           integrated CMS for PT. Timedoor Indonesia built with <strong
-            class="text-violet-400">Laravel</strong
+            class="text-blue-500">Laravel</strong
           >
           and
-          <strong class="text-violet-400">Nuxt.js</strong> with a
-          <strong class="text-violet-400">TailwindCSS</strong> UI, hosted on
-          <strong class="text-violet-400">AWS EC2!</strong>
+          <strong class="text-blue-500">Nuxt.js</strong> with a
+          <strong class="text-blue-500">TailwindCSS</strong> UI, hosted on
+          <strong class="text-blue-500">AWS EC2!</strong>
           CRUD operations that allows employees to manage inventory data efficiently
           with a built in QR Code for easy access to specific items. It also features
           a register by admin approval that sends the user credentials through email.
@@ -192,11 +192,11 @@
       <Work work={works[1]} on:preview={(e) => (selectedWork = e.detail)}>
         <p>
           Makardhi Jobfair is a job fair website for the Bali Tourism
-          Polytechnic, built fully with <strong class="text-violet-400"
+          Polytechnic, built fully with <strong class="text-blue-500"
             >Laravel</strong
           >
           and
-          <strong class="text-violet-400">TailwindCSS!</strong>
+          <strong class="text-blue-500">TailwindCSS!</strong>
           It features job listings, company profiles, and an application system for
           students or public to apply directly through the platform.
         </p>
@@ -206,8 +206,8 @@
           Paskamras Recruitment is a recruitment website for candidates who want
           to join Paskamras, an event-organizing club at ITB STIKOM Bali. Built
           with
-          <strong class="text-violet-400">Laravel</strong> and
-          <strong class="text-violet-400">Vue.js!</strong>
+          <strong class="text-blue-500">Laravel</strong> and
+          <strong class="text-blue-500">Vue.js!</strong>
           It features an application form, selection process updates, and information
           about Paskamras activities.
         </p>
@@ -219,17 +219,17 @@
     <div class="flex flex-col gap-2 text-center">
       <h4 class="text-lg sm:text-xl md:text-2xl">My Journey</h4>
       <h5 class="poppins font-semibold text-3xl sm:text-4xl md:text-5xl">
-        Work <span class="text-violet-400">Experience</span>
+        Work <span class="text-blue-500">Experience</span>
       </h5>
     </div>
 
     <div class="flex flex-col gap-14 mx-auto w-full max-w-[850px]">
       {#each experiences as exp, index}
-        <div class="flex flex-col gap-4 border-l-4 border-violet-500 pl-6">
+        <div class="flex flex-col gap-4 border-l-4 border-blue-600 pl-6">
           <h3 class="text-2xl sm:text-3xl font-semibold">
             {exp.title}
           </h3>
-          <p class="text-violet-400 font-medium">
+          <p class="text-blue-500 font-medium">
             {exp.place} • <span class="text-slate-400">{exp.period}</span>
           </p>
           <p class="text-slate-300 leading-relaxed">
@@ -247,7 +247,7 @@
     class="fixed px-4 inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
   >
     <div
-      class="bg-slate-900 p-6 rounded-xl max-w-3xl w-full h-[60vh] border border-violet-700 relative"
+      class="bg-slate-900 p-6 rounded-xl max-w-3xl w-full h-[60vh] border border-blue-500 relative"
     >
       <!-- Close Button -->
       <button

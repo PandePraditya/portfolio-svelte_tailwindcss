@@ -1,7 +1,7 @@
-<footer class="relative pt-24 pb-16 border-t border-violet-900/40 z-[-1]">
+<footer class="relative pt-24 pb-16 border-t border-violet-900/40 z-[0]">
   <!-- Top Line Accent -->
   <div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-1 
-              bg-violet-700 rounded-full">
+              bg-blue-700 rounded-full">
   </div>
 
   <div class="max-w-3xl mx-auto px-6 flex flex-col items-center gap-12">
@@ -21,21 +21,21 @@
       <div class="flex flex-col gap-3 text-slate-300 text-sm">
 
         <div class="flex items-center gap-3">
-          <i class="fa-solid fa-envelope text-violet-400 text-2xl"></i>
+          <i class="fa-solid fa-envelope text-blue-500 text-2xl"></i>
           <a href="mailto:pandepraditya@gmail.com"
-             class="hover:text-violet-300 transition">pandepraditya@gmail.com</a>
+             class="hover:text-cyan-500 transition">pandepraditya@gmail.com</a>
         </div>
 
         <div class="flex items-center gap-3">
-          <i class="fa-brands fa-github text-violet-400 text-2xl"></i>
+          <i class="fa-brands fa-github text-blue-500 text-2xl"></i>
           <a href="https://github.com/PandePraditya" target="_blank"
-             class="hover:text-violet-300 transition">github.com/PandePraditya</a>
+             class="hover:text-cyan-500 transition">github.com/PandePraditya</a>
         </div>
 
         <div class="flex items-center gap-3">
-          <i class="fa-brands fa-linkedin text-violet-400 text-2xl"></i>
+          <i class="fa-brands fa-linkedin text-blue-500 text-2xl"></i>
           <a href="https://linkedin.com/in/pande-praditya/" target="_blank"
-             class="hover:text-violet-300 transition">linkedin.com/in/pande-praditya</a>
+             class="hover:text-cyan-500 transition">linkedin.com/in/pande-praditya</a>
         </div>
 
       </div>
@@ -44,17 +44,17 @@
     <!-- Social Icons Row -->
     <div class="flex items-center gap-6">
       <a href="https://github.com/PandePraditya" target="_blank" 
-         class="text-slate-400 hover:text-violet-400 transition text-xl" aria-label="Visit my GitHub profile">
+         class="text-slate-400 hover:text-blue-500 transition text-xl" aria-label="Visit my GitHub profile">
         <i class="fa-brands fa-github text-3xl"></i>
       </a> 
 
       <a href="https://linkedin.com/in/pande-praditya/" target="_blank" 
-         class="text-slate-400 hover:text-violet-400 transition text-xl" aria-label="Visit my LinkedIn profile">
+         class="text-slate-400 hover:text-blue-500 transition text-xl" aria-label="Visit my LinkedIn profile">
         <i class="fa-brands fa-linkedin text-3xl"></i>
       </a>
 
       <a href="mailto:pandepraditya@gmail.com"
-         class="text-slate-400 hover:text-violet-400 transition text-xl" aria-label="Send me an email">
+         class="text-slate-400 hover:text-blue-500 transition text-xl" aria-label="Send me an email">
         <i class="fa-solid fa-envelope text-3xl"></i>
       </a>
     </div>

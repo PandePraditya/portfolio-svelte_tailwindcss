@@ -16,7 +16,7 @@
   class="relative flex flex-col max-w-[1400px] mx-auto w-full text-sm sm:text-base min-h-screen"
 >
   <div
-    class={"fixed bottom-0 w-full duration-200 flex p-10 z-[15]" +
+    class={"fixed bottom-0 w-full duration-200 flex p-10 z-[9999]" +
       (y > 0
         ? "opacity-full pointer-events-auto"
         : "pointer-events-none opacity-0")}
@@ -24,7 +24,7 @@
     <button
       aria-label="scroll to up"
       on:click={goTop}
-      class="ml-auto rounded-full bg-slate-900 text-violet-400 p-4 sm:px-5 hover:bg-slate-800 cursor-pointer"
+      class="ml-auto rounded-full bg-slate-900 text-blue-500 p-4 sm:px-5 hover:bg-slate-800 cursor-pointer"
     >
       <i class="fa-solid fa-arrow-up aspect-square"></i>
     </button>
