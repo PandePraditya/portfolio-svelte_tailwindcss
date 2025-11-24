@@ -115,12 +115,12 @@
 
       <!-- The rest of your content remains the same -->
       <p class="text-base sm:text-lg md:text-xl">
-        My <span class="text-blue-500">Favorite tech </span> includes PHP (Laravel),
+        My <span class="text-blue-400">Favorite tech </span> includes PHP (Laravel),
         JS (Vue.js, Nuxt.js, SvelteKit), TailwindCSS, MySQL or PostgreSQL, and QA
         (Cypress).
       </p>
       <p class="text-base sm:text-lg md:text-xl">
-        Besides the tech stack above, I'm also <span class="text-blue-500"
+        Besides the tech stack above, I'm also <span class="text-blue-400"
           >familiar</span
         > with AWS, Docker, and Git Actions.
       </p>
