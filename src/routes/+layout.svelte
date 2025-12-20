@@ -12,14 +12,22 @@
   }
 </script>
 
+<svelte:head>
+  <title>Pande Praditya | Developer</title>
+  <meta
+    name="description"
+    content="Frontend developer building modern web experiences using SvelteKit, Tailwind CSS, and JavaScript."
+  />
+</svelte:head>
+
 <div
   class="relative flex flex-col max-w-[1400px] mx-auto w-full text-sm sm:text-base min-h-screen"
 >
   <div
-    class={"fixed bottom-0 w-full duration-200 flex p-10 z-[9999]" +
+    class={"fixed bottom-0 right-0 w-full duration-200 flex p-10 z-[9999]" +
       (y > 0
-        ? "opacity-full pointer-events-auto"
-        : "pointer-events-none opacity-0")}
+        ? " opacity-full pointer-events-auto z-[9999]"
+        : " pointer-events-none opacity-0")}
   >
     <button
       aria-label="scroll to up"
@@ -29,6 +37,7 @@
       <i class="fa-solid fa-arrow-up aspect-square"></i>
     </button>
   </div>
+
   <Header {y} />
   <slot />
   <Footer />
