@@ -16,7 +16,7 @@
   <title>Pande Praditya | Developer</title>
   <meta
     name="description"
-    content="Frontend developer building modern web experiences using SvelteKit, Tailwind CSS, and JavaScript."
+    content="Full-stack developer specializing in PHP (Laravel), JavaScript (Vue.js, Nuxt.js, SvelteKit), Tailwind CSS, MySQL, PostgreSQL."
   />
 </svelte:head>
 
