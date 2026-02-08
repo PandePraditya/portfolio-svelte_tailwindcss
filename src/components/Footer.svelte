@@ -1,3 +1,8 @@
+<script>
+  // Dynamic year for copyright
+  let currentYear = new Date().getFullYear();
+</script>
+
 <footer class="relative pt-24 pb-16 border-t border-violet-900/40 z-[0]">
   <!-- Top Line Accent -->
   <div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-1 
@@ -61,7 +66,7 @@
 
     <!-- Bottom Note -->
     <p class="text-xs text-slate-500">
-      &copy; 2025 Pande Praditya • Crafted with SvelteKit and TailwindCSS
+      &copy; {currentYear} Pande Praditya • Crafted with SvelteKit and TailwindCSS
     </p>
 
   </div>
