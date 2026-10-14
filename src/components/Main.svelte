@@ -22,6 +22,7 @@
         "/images/works/work-1/inquiries.webp",
         "/images/works/work-1/dashboard.webp",
       ],
+      demo: true,
       url: false,
       confidential: false,
     },
@@ -30,13 +31,14 @@
       tech: "Laravel + TailwindCSS",
       icon: "fa-solid fa-briefcase",
       description:
-        "Makardhi Jobfair is a job fair website for Bali Tourism Polytechnic, built with Laravel and TailwindCSS. It includes job listings, company profiles, and an application system for students and the public.",
+        "Makardhi Jobfair is a job fair website for Bali Tourism Polytechnic, built with Laravel Blade Template and TailwindCSS. It includes job listings, company profiles, and an application system for students and the public.",
       images: [
         "/images/works/work-2/welcome.webp",
         "/images/works/work-2/landing-page.webp",
         "/images/works/work-2/login-admin.webp",
         "/images/works/work-2/admin-page.webp",
       ],
+      demo: true,
       url: false,
       confidential: false,
     },
@@ -50,7 +52,8 @@
         "/images/works/work-3/landing-page.webp",
         "/images/works/work-3/about-us.webp",
         "/images/works/work-3/moving-relocation.webp",
-      ], 
+      ],
+      demo: false,
       url: "https://abaworldwide.com",
       confidential: false,
     },
@@ -346,7 +349,7 @@
         >
           <span class="flex items-center gap-2">
             <i class="fa-solid fa-globe text-blue-400"></i>
-            View demo site
+            {selectedWork.demo ? "View demo site" : "Visit website"}
           </span>
           <i class="fa-solid fa-arrow-right text-slate-500"></i>
         </a>
