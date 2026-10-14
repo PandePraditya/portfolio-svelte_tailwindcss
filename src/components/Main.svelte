@@ -4,9 +4,9 @@
 
   const words = [
     "Full-Stack Developer",
-    "Web Quality Assurance",
-    "Laravel Enthusiast",
-    "Problem Solver"
+    "Quality Assurance",
+    "Project Manager",
+    "Problem Solver",
   ];
 
   let works = [
@@ -22,6 +22,8 @@
         "/images/works/work-1/inquiries.webp",
         "/images/works/work-1/dashboard.webp",
       ],
+      url: false,
+      confidential: false,
     },
     {
       name: "Makardhi Jobfair",
@@ -35,14 +37,22 @@
         "/images/works/work-2/login-admin.webp",
         "/images/works/work-2/admin-page.webp",
       ],
+      url: false,
+      confidential: false,
     },
     {
-      name: "Paskamras Recruitment",
-      tech: "Laravel + Vue.js",
+      name: "ABA Worldwide",
+      tech: "Wordpress + Gutenberg",
       icon: "fa-solid fa-handshake",
       description:
-        "Paskamras Recruitment is a recruitment website for ITB STIKOM Bali’s Paskamras club. Built with Laravel and Vue.js. Features include application forms, candidate tracking, and club information.",
-      confidential: true,
+        "ABA Worldwide is a company profile website for a local moving agency, built with Wordpress and Gutenberg. It features information about the company, services offered, and a contact form for inquiries, and Get a Quote form for potential clients to request a quote for relocation or freight services.",
+      images: [
+        "/images/works/work-3/landing-page.webp",
+        "/images/works/work-3/about-us.webp",
+        "/images/works/work-3/moving-relocation.webp",
+      ], 
+      url: "https://abaworldwide.com",
+      confidential: false,
     },
   ];
 
@@ -68,35 +78,55 @@
     {
       title: "Web Developer Intern",
       place: "PT. Timedoor Indonesia",
-      period: "September 2024 – February 2025",
+      period: "September 2024 - February 2025",
       description:
         "Worked on internal systems using Laravel and Vue/Nuxt, built features, maintained production apps, and collaborated with the development team.",
     },
     {
       title: "Quality Assurance Intern",
       place: "PT. Timedoor Indonesia",
-      period: "April 2025 – July 2025",
+      period: "March 2025 - July 2025",
       description:
         "Performed manual testing & Automation testing using cypress, created test cases & documented bugs in Notion, and improved product stability by working closely with developers.",
     },
     {
-      title: "Independent Freelance Web Developer",
-      place: "Self-employed",
-      period: "2024 — Present",
-      description:
-        "Worked directly with clients to build custom websites and systems using Laravel, Vue/Nuxt sometimes React or Svelte, and TailwindCSS. Handled full-cycle development including planning, design, development, and deployments.",
-    },
-    {
       title: "Freelance Developer",
       place: "Wedyapancer Dev",
-      period: "April 2025 — Present",
+      period: "April 2025 - Present",
       description:
         "Part of a developer group creating web, mobile, and desktop applications. Contributed to real client projects, API development, authentication systems, and UI implementation.",
     },
+    {
+      title: "Junior Software Engineer",
+      place: "ABA Worldwide",
+      period: "August 2025 - Present",
+      description:
+        "Working as a junior software engineer at ABA Worldwide, contributing to the development and maintenance of their company profile website and operations app.",
+    }
   ];
 
   let selectedWork = null;
+
+  // for Image scroll indicator (its just so people know it can be scrolled, better UX)
+  let imageContainer;
+  let canScroll = false;
+
+  function checkScroll() {
+    if (imageContainer) {
+      canScroll = imageContainer.scrollWidth > imageContainer.clientWidth;
+    }
+  }
 </script>
+
+<style>
+  .hide-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+</style>
 
 <main class="flex flex-col flex-1 p-4">
   <section
@@ -115,17 +145,17 @@
 
       <!-- The rest of your content remains the same -->
       <p class="text-base sm:text-lg md:text-xl">
-        My <span class="text-blue-400">Favorite tech </span> includes PHP (Laravel),
-        JS (Vue.js, Nuxt.js, SvelteKit), TailwindCSS, MySQL or PostgreSQL, and QA
+        My <span class="text-blue-400">Current tech stack </span> includes PHP (Laravel),
+        JS (Vue.js, React.js, SvelteKit, Node.js), TailwindCSS, MySQL or PostgreSQL, and QA
         (Cypress).
       </p>
       <p class="text-base sm:text-lg md:text-xl">
         Besides the tech stack above, I'm also <span class="text-blue-400"
           >familiar</span
-        > with AWS, Docker, and Git Actions.
+        > with AWS, Docker, Git Actions, Jenkins.
       </p>
       <a
-        href="mailto:johndoe@gmail.com"
+        href="mailto:pandepraditya@gmail.com"
         target="_blank"
         class="blueShadow mx-auto lg:mr-auto text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 cursor-pointer"
       >
@@ -137,6 +167,7 @@
     </div>
     <div class="relative shadow-2xl grid place-items-center">
       <img
+        aria-hidden="false"
         src="/images/profile.webp"
         alt="Profile Image"
         class="object-cover z-[2] max-h-[70vh] rounded-full"
@@ -213,13 +244,11 @@
       </Work>
       <Work work={works[2]} on:preview={(e) => (selectedWork = e.detail)}>
         <p>
-          Paskamras Recruitment is a recruitment website for candidates who want
-          to join Paskamras, an event-organizing club at ITB STIKOM Bali. Built
-          with
-          <strong class="text-blue-500">Laravel</strong> and
-          <strong class="text-blue-500">Vue.js!</strong>
-          It features an application form, selection process updates, and information
-          about Paskamras activities.
+          ABA Worldwide is a company profile website for a local moving agency,
+          built with <strong class="text-blue-500">Wordpress</strong> and
+          <strong class="text-blue-500">Gutenberg!</strong>
+          It features information about the company, services offered, and a contact
+          form for inquiries, and Get a Quote form for potential clients to request a quote for relocation or freight services.
         </p>
       </Work>
     </div>
@@ -257,7 +286,7 @@
     class="fixed px-4 inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
   >
     <div
-      class="bg-slate-900 p-6 rounded-xl max-w-3xl w-full h-[60vh] border border-blue-500 relative"
+      class="bg-slate-900 p-6 rounded-xl max-w-3xl w-full h-[70vh] md:h-[60vh] border border-blue-500 relative"
     >
       <!-- Close Button -->
       <button
@@ -283,7 +312,7 @@
           Preview unavailable due to contract with client.
         </div>
       {:else if selectedWork.images && selectedWork.images.length > 0}
-        <div class="flex overflow-x-auto gap-4 pb-2">
+        <div class="flex overflow-x-auto gap-4 pb-2 hide-scrollbar">
           {#each selectedWork.images as img}
             <img
               src={img}
@@ -292,6 +321,9 @@
             />
           {/each}
         </div>
+        <p class="text-sm text-center text-slate-400">
+          Shift + Scroll to view next images
+        </p>
       {:else}
         <div
           class="h-48 bg-slate-800 border border-slate-700 rounded-lg grid place-items-center text-slate-400"
@@ -304,6 +336,25 @@
       <p class="mt-4 text-slate-300">
         {selectedWork.description || "This project has no description yet."}
       </p>
+
+      {#if selectedWork.url}
+        <a
+          href={selectedWork.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-4 w-1/2 flex items-center justify-between md:px-4 md:py-3.5 px-3 py-2.5 border border-slate-700 rounded-lg text-sm md:text-base font-medium text-white hover:border-slate-500 transition-colors"
+        >
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-globe text-blue-400"></i>
+            View demo site
+          </span>
+          <i class="fa-solid fa-arrow-right text-slate-500"></i>
+        </a>
+      {:else}
+        <p class="mt-4 text-slate-400 border-t border-slate-700 pt-4">
+          <span class="font-semibold">Notice:</span> Websites currently under maintenance or Not active anymore.
+        </p>
+      {/if}
     </div>
   </div>
 {/if}
