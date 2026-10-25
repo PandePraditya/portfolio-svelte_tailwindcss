@@ -12,8 +12,7 @@
   <div class="max-w-3xl mx-auto px-6 flex flex-col items-center gap-12">
 
     <!-- Contact Card -->
-    <div class="bg-white/5 backdrop-blur-md border border-white/10 
-                rounded-2xl px-10 py-8 flex flex-col items-center gap-4 shadow-xl">
+    <div class="px-10 py-8 flex flex-col items-center gap-4 shadow-xl">
 
       <p class="text-xl font-semibold text-white tracking-wide">
         Connect with me
@@ -26,46 +25,34 @@
       <div class="flex flex-col gap-3 text-slate-300 text-sm">
 
         <div class="flex items-center gap-3">
-          <i class="fa-solid fa-envelope text-blue-500 text-2xl"></i>
+          <i class="fa-brands fa-whatsapp text-blue-500 text-2xl" aria-hidden="true"></i>
+          <a href="https://wa.me/628113866745" target="_blank" rel="noopener noreferrer"
+             class="hover:text-cyan-500 transition">wa.me/628113866745<span class="sr-only"> (opens in a new tab)</span></a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-envelope text-blue-500 text-2xl" aria-hidden="true"></i>
           <a href="mailto:pandepraditya@gmail.com"
              class="hover:text-cyan-500 transition">pandepraditya@gmail.com</a>
         </div>
 
         <div class="flex items-center gap-3">
-          <i class="fa-brands fa-github text-blue-500 text-2xl"></i>
-          <a href="https://github.com/PandePraditya" target="_blank"
-             class="hover:text-cyan-500 transition">github.com/PandePraditya</a>
+          <i class="fa-brands fa-github text-blue-500 text-2xl" aria-hidden="true"></i>
+          <a href="https://github.com/PandePraditya" target="_blank" rel="noopener noreferrer"
+             class="hover:text-cyan-500 transition">github.com/PandePraditya<span class="sr-only"> (opens in a new tab)</span></a>
         </div>
 
         <div class="flex items-center gap-3">
-          <i class="fa-brands fa-linkedin text-blue-500 text-2xl"></i>
-          <a href="https://linkedin.com/in/pande-praditya/" target="_blank"
-             class="hover:text-cyan-500 transition">linkedin.com/in/pande-praditya</a>
+          <i class="fa-brands fa-linkedin text-blue-500 text-2xl" aria-hidden="true"></i>
+          <a href="https://linkedin.com/in/pande-praditya/" target="_blank" rel="noopener noreferrer"
+             class="hover:text-cyan-500 transition">linkedin.com/in/pande-praditya<span class="sr-only"> (opens in a new tab)</span></a>
         </div>
 
       </div>
     </div>
 
-    <!-- Social Icons Row -->
-    <div class="flex items-center gap-6">
-      <a href="https://github.com/PandePraditya" target="_blank" 
-         class="text-slate-400 hover:text-blue-500 transition text-xl" aria-label="Visit my GitHub profile">
-        <i class="fa-brands fa-github text-3xl"></i>
-      </a> 
-
-      <a href="https://linkedin.com/in/pande-praditya/" target="_blank" 
-         class="text-slate-400 hover:text-blue-500 transition text-xl" aria-label="Visit my LinkedIn profile">
-        <i class="fa-brands fa-linkedin text-3xl"></i>
-      </a>
-
-      <a href="mailto:pandepraditya@gmail.com"
-         class="text-slate-400 hover:text-blue-500 transition text-xl" aria-label="Send me an email">
-        <i class="fa-solid fa-envelope text-3xl"></i>
-      </a>
-    </div>
-
     <!-- Bottom Note -->
-    <p class="text-xs text-slate-500">
+    <p class="text-xs text-slate-400">
       &copy; {currentYear} Pande Praditya • Crafted with SvelteKit and TailwindCSS
     </p>
 
