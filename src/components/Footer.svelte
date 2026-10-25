@@ -53,7 +53,7 @@
 
     <!-- Bottom Note -->
     <p class="text-xs text-slate-400">
-      &copy; {currentYear} Pande Praditya • Crafted with SvelteKit and TailwindCSS
+      &copy; {currentYear} Pande Praditya
     </p>
 
   </div>
