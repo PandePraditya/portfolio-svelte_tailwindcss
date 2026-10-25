@@ -11,11 +11,16 @@
 
   let works = [
     {
+      id: 1,
       name: "Timedoor Inventory",
+      client: "PT. Timedoor Indonesia",
+      period: "September 2024 - February 2025",
       tech: "Laravel + Nuxt.js",
       icon: "fa-solid fa-boxes-stacked",
       description:
         "Timedoor Inventory is an inventory management system with an integrated CMS for PT. Timedoor Indonesia. It is built in laravel with a register by admin approval that sends the user credentials through email. The frontend is built with Nuxt.js and TailwindCSS, hosted on AWS EC2. It features CRUD operations for managing inventory data efficiently, along with QR Code generation for easy access to specific items.",
+      impact:
+        "End-to-end delivery on a production internal system: Laravel API, Nuxt.js frontend and AWS EC2 deployment, built and maintained alongside the development team during my internship.",
       images: [
         "/images/works/work-1/landing-page.webp",
         "/images/works/work-1/login.webp",
@@ -27,11 +32,16 @@
       confidential: false,
     },
     {
+      id: 2,
       name: "Makardhi Jobfair",
+      client: "Bali Tourism Polytechnic",
+      period: "",
       tech: "Laravel + TailwindCSS",
       icon: "fa-solid fa-briefcase",
       description:
         "Makardhi Jobfair is a job fair website for Bali Tourism Polytechnic, built with Laravel Blade Template and TailwindCSS. It includes job listings, company profiles, and an application system for students and the public.",
+      impact:
+        "A public-facing platform that lets students and job seekers apply to listed companies directly, with the public site and the admin side served from one Laravel application.",
       images: [
         "/images/works/work-2/welcome.webp",
         "/images/works/work-2/landing-page.webp",
@@ -43,11 +53,16 @@
       confidential: false,
     },
     {
+      id: 3,
       name: "ABA Worldwide",
+      client: "ABA Worldwide",
+      period: "August 2025 - Present",
       tech: "Wordpress + Gutenberg",
       icon: "fa-solid fa-handshake",
       description:
         "ABA Worldwide is a company profile website for a local moving agency, built with Wordpress and Gutenberg. It features information about the company, services offered, and a contact form for inquiries, and Get a Quote form for potential clients to request a quote for relocation or freight services.",
+      impact:
+        "A live company profile for a working moving agency, where the contact and Get a Quote forms are the inbound path for relocation and freight enquiries.",
       images: [
         "/images/works/work-3/landing-page.webp",
         "/images/works/work-3/about-us.webp",
@@ -129,6 +144,29 @@
   .hide-scrollbar::-webkit-scrollbar {
     display: none; /* Chrome/Safari */
   }
+
+  /* Modal scrollbar: dark enough to blend into the panel, still visible
+     enough to show there is more content below. */
+  .dark-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: theme("colors.slate.700") transparent;
+  }
+  .dark-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  .dark-scrollbar::-webkit-scrollbar-button {
+    display: none;
+  }
+  .dark-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .dark-scrollbar::-webkit-scrollbar-thumb {
+    background-color: theme("colors.slate.700");
+    border-radius: 9999px;
+  }
+  .dark-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: theme("colors.slate.600");
+  }
 </style>
 
 <main class="flex flex-col flex-1 p-4">
@@ -165,7 +203,7 @@
         <div
           class="absolute top-0 right-full w-full h-full bg-blue-500 opacity-20 group-hover:translate-x-full z-0 duration-200"
         ></div>
-        <h4 class="relative z-[9]">Get in touch &rarr;</h4>
+        <span class="relative z-[9]">Get in touch &rarr;</span>
       </a>
     </div>
     <div class="relative shadow-2xl grid place-items-center">
@@ -183,17 +221,17 @@
     class="py-20 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative"
   >
     <div class="flex flex-col gap-2 text-center py-4">
-      <h6 class="text-lg sm:text-xl md:text-2xl">Want to know more?</h6>
-      <h3 class="font-medium text-3xl sm:text-4xl md:text-5xl">
+      <p class="text-lg sm:text-xl md:text-2xl">Want to know more?</p>
+      <h2 class="font-medium text-3xl sm:text-4xl md:text-5xl">
         A Bit <span class="poppins text-blue-500">about</span> me.
-      </h3>
+      </h2>
     </div>
     <p class="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl">
       I am . . .
     </p>
     <div class="flex flex-col gap-20 w-full mx-auto max-w-[800px]">
       {#each benefits as benefit, index}
-        <div class="flex gap-6 sm:gap-8">
+        <div class="flex gap-6 sm:gap-8 justify-between">
           <p
             class="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold"
           >
@@ -212,57 +250,64 @@
 
   <section id="projects" class="py-20 lg:py-32 flex flex-col gap-24">
     <div class="flex flex-col gap-2 text-center">
-      <h4 class="text-lg sm:text-xl md:text-2xl">A few of my creations</h4>
-      <h5 class="poppins font-semibold text-3xl sm:text-4xl md:text-5xl">
+      <p class="text-lg sm:text-xl md:text-2xl">A few of my creations</p>
+      <h2 class="poppins font-semibold text-3xl sm:text-4xl md:text-5xl">
         Curious to <span class="poppins text-blue-500">see</span> my work?
-      </h5>
+      </h2>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-      <Work work={works[0]} on:preview={(e) => (selectedWork = e.detail)}>
-        <p>
-          Timedoor Inventory is an inventory management system with an
-          integrated CMS for PT. Timedoor Indonesia built with <strong
-            class="text-blue-500">Laravel</strong
-          >
-          and
-          <strong class="text-blue-500">Nuxt.js</strong> with a
-          <strong class="text-blue-500">TailwindCSS</strong> UI, hosted on
-          <strong class="text-blue-500">AWS EC2!</strong>
-          CRUD operations that allows employees to manage inventory data efficiently
-          with a built in QR Code for easy access to specific items. It also features
-          a register by admin approval that sends the user credentials through email.
-        </p>
-      </Work>
-      <Work work={works[1]} on:preview={(e) => (selectedWork = e.detail)}>
-        <p>
-          Makardhi Jobfair is a job fair website for the Bali Tourism
-          Polytechnic, built fully with <strong class="text-blue-500"
-            >Laravel</strong
-          >
-          and
-          <strong class="text-blue-500">TailwindCSS!</strong>
-          It features job listings, company profiles, and an application system for
-          students or public to apply directly through the platform.
-        </p>
-      </Work>
-      <Work work={works[2]} on:preview={(e) => (selectedWork = e.detail)}>
-        <p>
-          ABA Worldwide is a company profile website for a local moving agency,
-          built with <strong class="text-blue-500">Wordpress</strong> and
-          <strong class="text-blue-500">Gutenberg!</strong>
-          It features information about the company, services offered, and a contact
-          form for inquiries, and Get a Quote form for potential clients to request a quote for relocation or freight services.
-        </p>
-      </Work>
+      {#each works as work (work.id)}
+        <Work {work} on:preview={(e) => (selectedWork = e.detail)} />
+      {/each}
+    </div>
+
+    <!-- Closing entry: the three above are what I can show, not the limit -->
+    <div
+      class="p-4 sm:p-6 flex flex-col gap-4 rounded-lg border border-solid border-blue-700 text-center hover:border-blue-500 duration-200"
+    >
+      <div
+        class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"
+      >
+        <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+      </div>
+      <h3 class="font-medium text-xl sm:text-2xl md:text-3xl">
+        . . . and any project you have in mind
+      </h3>
+      <p class="text-slate-300 max-w-[600px] mx-auto">
+        These are the ones I can show publicly. If you have something else in
+        mind, I would like to hear about it.
+      </p>
+      <a
+        href="https://wa.me/628113866745?text=Hi%20Pande%2C%20I%20saw%20your%20portfolio%20and%20I%20have%20a%20project%20in%20mind."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mx-auto mt-2 text-base sm:text-lg poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+      >
+        <div
+          class="absolute top-0 right-full w-full h-full bg-blue-500 opacity-20 group-hover:translate-x-full z-0 duration-200"
+        ></div>
+        <span class="relative z-[9]">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          Chat on WhatsApp &rarr;<span class="sr-only"> (opens in a new tab)</span>
+        </span>
+      </a>
+      <p class="text-slate-400">
+        or
+        <a
+          href="mailto:pandepraditya@gmail.com"
+          class="underline duration-200 hover:text-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+          >send an email</a
+        >
+      </p>
     </div>
   </section>
 
   <section id="experience" class="py-20 lg:py-32 flex flex-col gap-20">
     <div class="flex flex-col gap-2 text-center">
-      <h4 class="text-lg sm:text-xl md:text-2xl">My Journey</h4>
-      <h5 class="poppins font-semibold text-3xl sm:text-4xl md:text-5xl">
+      <p class="text-lg sm:text-xl md:text-2xl">My Journey</p>
+      <h2 class="poppins font-semibold text-3xl sm:text-4xl md:text-5xl">
         Work <span class="text-blue-500">Experience</span>
-      </h5>
+      </h2>
     </div>
 
     <div class="flex flex-col gap-14 mx-auto w-full max-w-[850px]">
@@ -289,7 +334,7 @@
     class="fixed px-4 inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
   >
     <div
-      class="bg-slate-900 p-6 rounded-xl max-w-3xl w-full h-[70vh] md:h-[60vh] border border-blue-500 relative"
+      class="bg-slate-900 p-6 rounded-xl max-w-3xl w-full h-[70vh] md:h-[60vh] overflow-y-auto dark-scrollbar border border-blue-500 relative"
     >
       <!-- Close Button -->
       <button
@@ -300,9 +345,18 @@
       </button>
 
       <!-- Title -->
-      <h2 class="text-2xl font-semibold text-white mb-4">
-        {selectedWork.name}
-      </h2>
+      <div class="mb-4">
+        <h2 class="text-2xl font-semibold text-white">
+          {selectedWork.name}
+        </h2>
+        {#if selectedWork.client}
+          <p class="text-blue-500 font-medium">
+            {selectedWork.client}
+            {#if selectedWork.period}•{/if}
+            <span class="text-slate-400">{selectedWork.period}</span>
+          </p>
+        {/if}
+      </div>
 
       <!-- Images -->
       {#if selectedWork.confidential}
@@ -339,6 +393,17 @@
       <p class="mt-4 text-slate-300">
         {selectedWork.description || "This project has no description yet."}
       </p>
+
+      <!-- What it actually achieved, modal only -->
+      {#if selectedWork.impact}
+        <div class="mt-4 p-4 rounded-lg border border-blue-700 bg-slate-950">
+          <p class="flex items-center gap-2 text-blue-500 font-medium">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+            Impact
+          </p>
+          <p class="mt-2 text-slate-300">{selectedWork.impact}</p>
+        </div>
+      {/if}
 
       {#if selectedWork.url}
         <a
